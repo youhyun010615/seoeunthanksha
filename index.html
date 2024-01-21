@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+        background-image: url('hello.jpg');
+        background-size: 430px;
+        background-repeat: repeat;
+        background-position: center 40%;
+        color: white;
+        font-family: 'Arial', sans-serif;
+        overflow: hidden; /* 스크롤을 막기 위해 추가 */
+      }
+
+      button {
+        font-size: 30px;
+        padding: 10px 20px;
+        background-color: #b309b3;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      button:hover {
+        background-color: #6a5acd;
+      }
+
+      #output {
+        font-size: 16px;
+        margin-top: 20px;
+        opacity: 0;
+        transition: font-size 1s, opacity 1s;
+      }
+
+      #imageContainer {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none; /* 초기에는 숨겨둠 */
+      }
+
+      #imageContainer img {
+        max-width: 100%;
+        height: auto;
+        display: none;
+        transition: opacity 1s; /* 투명도 변화에 대한 트랜지션 설정 */
+      }
+
+      .right {
+        display: none;
+        position: fixed;
+        top: 50%; /* 수직 중앙 정렬을 위해 50%로 설정 */
+        left: 10px; /* 화면 왼쪽으로부터의 거리 */
+        transform: translateY(-50%); /* 수직 중앙 정렬을 위한 보정 */
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        white-space: nowrap;
+        font-size: 50px;
+        animation: blink 1.8s infinite alternate;
+        color: white;
+        background-color: rgb(233, 83, 235);
+        border: solid 5px;
+        border-radius: 30px;
+        text-shadow: 5px 5px 5px purple;
+      }
+
+      .left {
+        display: none;
+        position: fixed;
+        top: 50%; /* 수직 중앙 정렬을 위해 50%로 설정 */
+        right: 10px; /* 화면 오른쪽으로부터의 거리 */
+        transform: translateY(-50%); /* 수직 중앙 정렬을 위한 보정 */
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        white-space: nowrap;
+        font-size: 50px;
+        animation: blink 1.8s infinite alternate;
+        color: white;
+        background-color: rgb(233, 83, 235);
+        border: solid 5px;
+        border-radius: 30px;
+        text-shadow: 5px 5px 5px purple;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+
+      @keyframes blink {
+        from {
+          opacity: 1; /* 시작 시 투명도 1 */
+        }
+        to {
+          opacity: 0; /* 끝나는 시점에서 투명도 0 */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <button id="myButton"><b>여기 눌러봐 !</b></button>
+    <div id="output"></div>
+    <p class="right">♥조서은 파이팅♥</p>
+    <p class="left">내가 항상 응원할게</p>
+
+    <div id="imageContainer">
+      <!-- 이미지 추가 -->
+      <img src="1.jpg" alt="Image 1" />
+      <img src="2.jpg" alt="Image 2" />
+      <img src="3.jpg" alt="Image 3" />
+      <img src="4.jpg" alt="Image 4" />
+      <img src="5.jpg" alt="Image 5" />
+      <img src="6.jpg" alt="Image 6" />
+      <img src="7.jpg" alt="Image 7" />
+      <img src="8.jpg" alt="Image 8" />
+      <img src="9.jpg" alt="Image 9" />
+      <img src="10.jpg" alt="Image 10" />
+      <img src="11.jpg" alt="Image 11" />
+      <img src="12.jpg" alt="Image 12" />
+      <img src="13.jpg" alt="Image 13" />
+      <img src="14.jpg" alt="Image 14" />
+      <img src="15.jpg" alt="Image 15" />
+      <img src="16.jpg" alt="Image 16" />
+      <img src="17.jpg" alt="Image 17" />
+      <img src="18.jpg" alt="Image 18" />
+      <img src="19.jpg" alt="Image 19" />
+      <img src="20.jpg" alt="Image 20" />
+      <img src="21.jpg" alt="Image 21" />
+      <img src="22.jpg" alt="Image 22" />
+      <img src="23.jpg" alt="Image 23" />
+      <img src="24.png" alt="Image 24" />
+      <img src="25.png" alt="Image 25" />
+      <img src="26.png" alt="Image 26" />
+
+      <img src="2 - 복사본.jpg" alt="Image 2" />
+      <img src="3 - 복사본.jpg" alt="Image 3" />
+      <img src="4 - 복사본.jpg" alt="Image 4" />
+      <img src="5 - 복사본.jpg" alt="Image 5" />
+      <img src="6 - 복사본.jpg" alt="Image 6" />
+      <img src="7 - 복사본.jpg" alt="Image 7" />
+      <img src="8 - 복사본.jpg" alt="Image 8" />
+      <img src="9 - 복사본.jpg" alt="Image 9" />
+      <img src="10 - 복사본.jpg" alt="Image 10" />
+      <img src="11 - 복사본.jpg" alt="Image 11" />
+      <img src="12 - 복사본.jpg" alt="Image 12" />
+      <img src="13 - 복사본.jpg" alt="Image 13" />
+      <img src="14 - 복사본.jpg" alt="Image 14" />
+      <img src="15 - 복사본.jpg" alt="Image 15" />
+      <img src="16 - 복사본.jpg" alt="Image 16" />
+      <img src="17 - 복사본.jpg" alt="Image 17" />
+      <img src="18 - 복사본.jpg" alt="Image 18" />
+      <img src="19 - 복사본.jpg" alt="Image 19" />
+      <img src="20 - 복사본.jpg" alt="Image 20" />
+      <img src="21 - 복사본.jpg" alt="Image 21" />
+      <img src="22 - 복사본.jpg" alt="Image 22" />
+      <img src="23 - 복사본.jpg" alt="Image 23" />
+      <img src="24 - 복사본.jpg" alt="Image 24" />
+    </div>
+
+    <audio id="myAudio">
+      <source
+        src="디오(D.O.) - 별 떨어진다 (I Do) _ 가사.mp4"
+        type="audio/mp4"
+      />
+    </audio>
+
+    <script>
+      const button = document.getElementById('myButton');
+      const output = document.getElementById('output');
+      const images = document.querySelectorAll('#imageContainer img');
+      const audio = document.getElementById('myAudio');
+      const rightText = document.querySelector('.right');
+      const leftText = document.querySelector('.left');
+      let currentIndex = 0;
+
+      button.addEventListener('click', function () {
+        button.style.display = 'none';
+        output.style.opacity = '1';
+        output.style.fontSize = '30px';
+        rightText.style.display = 'block';
+        leftText.style.display = 'block';
+        document.getElementById('imageContainer').style.display = 'block';
+        showNextImage();
+        audio.play(); // 노래 재생
+      });
+
+      function showNextImage() {
+        if (currentIndex < images.length) {
+          images[currentIndex].style.display = 'block';
+          images[currentIndex].style.opacity = '1'; // 이미지를 표시할 때 페이드 인 효과
+          currentIndex++;
+          setTimeout(showNextImage, 2000); // 2초 후에 다음 이미지 표시
+        }
+      }
+    </script>
+  </body>
+</html>
